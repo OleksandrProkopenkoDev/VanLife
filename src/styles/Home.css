@@ -1,0 +1,19 @@
+.home{
+    background-image: url("/src/assets/images/home_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 550px;
+    height: 400px;
+}
+.home--content{
+    padding: 50px 20px 50px 20px;
+    color: #FFFFFF;
+}
+.home--content > a{
+    background-color: #FF8C38;
+    color: #FFFFFF;
+    width: 100%;
+    height: 40px;
+    border-radius: 6px;
+    transition: transform .1s ease-in-out;
+}

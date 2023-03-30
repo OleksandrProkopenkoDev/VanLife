@@ -1,0 +1,30 @@
+.about{
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.about--poster{
+    width: 550px; 
+}
+.about--content{
+    width: 494px;
+
+}
+.about--explore{
+    background-color: #FFCC8D;
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    border-radius: 6px;
+}
+.about--explore > button{
+    background-color: #161616;
+    color: white ;
+    font-weight: 500;
+    height: 40px;
+    width: 180px;
+    border-radius: 8px;
+    transition: transform .1s ease-in-out;
+}
