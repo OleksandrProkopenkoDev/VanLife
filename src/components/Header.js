@@ -1,4 +1,5 @@
 import { Link, NavLink } from "react-router-dom"; // NavLink is the same as Link, but it has property 'isActive' which we can use to style active link
+import userIcon from "../assets/images/user.png";
 
 export default function Header() {
   const activeLinkStyle = {
@@ -34,6 +35,9 @@ export default function Header() {
         >
           Vans
         </NavLink>
+        <Link to="login" className="login-link">
+          <img src={userIcon} className="login-icon" />
+        </Link>
       </nav>
     </header>
   );
