@@ -1,5 +1,5 @@
 import poster from "../assets/images/about_poster.png";
-import "../styles/About.css";
+import "./About.css";
 
 function About() {
   return (

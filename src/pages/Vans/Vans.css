@@ -20,11 +20,16 @@
     border-radius: 5px;
 }
 
+
+
 .van-list-container button {
     margin-right: 20px;
     cursor: pointer;
 }
 
+.van-list-filter-buttons > a {
+    margin-right: 15px;
+}
 .van-type {
     height: 34px;
     padding: 6px 26px;
@@ -77,3 +82,5 @@
 i[class*='van-type-'] {
     padding: 7px 14px;
 }
+
+
