@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import "./HostVans.css";
+import { getHostVans } from "../../api";
+
+export function loader() {
+  return getHostVans();
+}
 
 export default function HostVans() {
-  const [hostVans, setHostVans] = useState([]);
-  useEffect(() => {
-    fetch("/api/host/vans")
-      .then((response) => response.json())
-      .then((data) => setHostVans(data.vans));
-  }, []);
+  const hostVans = useLoaderData();
 
   const hostVansElements = hostVans.map((van) => {
     return (
@@ -27,11 +27,7 @@ export default function HostVans() {
   return (
     <div>
       <h1>Your listed vans</h1>
-      {hostVans.length > 0 ? (
-        <section>{hostVansElements}</section>
-      ) : (
-        <h2>Loading... or you have no vans yet</h2>
-      )}
+      <section>{hostVansElements}</section>
     </div>
   );
 }
