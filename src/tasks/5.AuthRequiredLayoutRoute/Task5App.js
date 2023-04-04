@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 
 import Layout from "./Layout";
+import LoginPage, { loginPageLoader } from "./LoginPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -22,33 +23,34 @@ const router = createBrowserRouter(
           return null;
         }}
       />
-
-      <Route
-        path="protected"
-        element={<h1>Super secret info here</h1>}
-        loader={async () => {
-          const rand = Math.random() * 10;
-          setTimeout(() => {
-            console.log("Protected route");
-          }, rand);
-
-          return null;
-        }}
-      >
+      <Route element={<AuthRequired />}>
         <Route
-          path="nested"
-          element={<h2>Nested protected route</h2>}
+          path="protected"
+          element={<h1>Super secret info here</h1>}
           loader={async () => {
             const rand = Math.random() * 10;
             setTimeout(() => {
-              console.log("Nested protected route");
+              console.log("Protected route");
             }, rand);
 
             return null;
           }}
-        />
+        >
+          <Route
+            path="nested"
+            element={<h2>Nested protected route</h2>}
+            loader={async () => {
+              const rand = Math.random() * 10;
+              setTimeout(() => {
+                console.log("Nested protected route");
+              }, rand);
+
+              return null;
+            }}
+          />
+        </Route>
       </Route>
-      <Route path="login" element={<h2>Login page goes here</h2>} />
+      <Route path="login" element={<LoginPage />} loader={loginPageLoader} />
     </Route>
   )
 );

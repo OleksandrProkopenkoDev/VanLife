@@ -7,7 +7,7 @@ export default function AuthRequired() {
   //Otherwise: return <Outlet />
   const isLoggedIn = false;
   if (!isLoggedIn) {
-    return <Navigate to="/login" />;
+    return <Navigate to="/login?message=You must log in first" />;
   }
   return <Outlet />;
 }

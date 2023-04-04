@@ -1,9 +1,20 @@
-import { useParams, useLocation, Link, useLoaderData } from "react-router-dom";
+import {
+  useParams,
+  useNavigate,
+  useLocation,
+  Link,
+  useLoaderData,
+  redirect,
+} from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./VanDetail.css";
 import { getVans } from "../../api";
 
 export function loader({ params }) {
+  // const navigate = useNavigate();
+  console.log("VanDetail. trying to redirect to /login");
+  // navigate("/login");
+  redirect("login");
   return getVans(params.id);
 }
 
