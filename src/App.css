@@ -99,6 +99,14 @@ nav > h1{
     color: white;
     font-family: 'Inter', sans-serif;
 }
+.login-form > button:disabled{
+    background-color: #b99073;
+
+    color: rgb(214, 208, 208);
+    
+}
+
+
 .red {
     color: #cc0000;
 }
@@ -140,6 +148,8 @@ nav > h1{
     color: white;
     margin-bottom: 20px;
 }
+
+
 
 footer{
     z-index: 1;
