@@ -13,6 +13,6 @@ import "./server";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Task7App />
+    <App />
   </React.StrictMode>
 );
