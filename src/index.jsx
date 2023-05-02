@@ -7,11 +7,12 @@ import Task3App from "./tasks/3.1.SearchParams/Task3.1App";
 import Task4App from "./tasks/4.1.Loaders/Task4App";
 import Task5App from "./tasks/5.AuthRequiredLayoutRoute/Task5App";
 import Task6App from "./tasks/6.Actions/Task6App";
+import Task7App from "./tasks/7.Suspense/Task7App";
 import "./server";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Task7App />
   </React.StrictMode>
 );

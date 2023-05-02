@@ -8,6 +8,10 @@ export default function Header() {
     color: "#161616",
   };
 
+  function fakeLogOut() {
+    localStorage.removeItem("loggedIn");
+  }
+
   return (
     <header>
       <Link className="site-logo" to="/">
@@ -38,6 +42,7 @@ export default function Header() {
         <Link to="login" className="login-link">
           <img src={userIcon} className="login-icon" />
         </Link>
+        <button onClick={fakeLogOut}>X</button>
       </nav>
     </header>
   );

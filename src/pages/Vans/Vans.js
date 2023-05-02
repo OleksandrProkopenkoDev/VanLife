@@ -1,10 +1,10 @@
-import { Link, useLoaderData, useSearchParams } from "react-router-dom";
+import { Link, useLoaderData, useSearchParams, defer } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "./Vans.css";
 import { getVans } from "../../api";
 
 export function loader() {
-  return getVans();
+  return defer({ vans: getVans() });
 }
 
 export default function Vans() {

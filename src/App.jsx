@@ -1,3 +1,10 @@
+// import {
+//   RouterProvider,
+//   createBrowserRouter,
+//   createRoutesFromElements,
+//   Route,
+//   Link,
+// } from "react-router-dom";
 import {
   RouterProvider,
   createBrowserRouter,
@@ -24,7 +31,7 @@ import Info from "./pages/Vans/props/Info";
 import Pricing from "./pages/Vans/props/Pricing";
 import Photos from "./pages/Vans/props/Photos";
 import NotFound from "./components/NotFound";
-import Login from "./pages/Login";
+import Login, { action as loginAction } from "./pages/Login";
 import { requireAuth } from "./utils";
 import AuthRequireLayout from "./pages/Host/AuthRequireLayout";
 
@@ -33,7 +40,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />}>
       <Route path="" element={<Home />} />
       <Route path="about" element={<About />} />
-      <Route path="login" element={<Login />} />
+      <Route path="login" element={<Login />} action={loginAction} />
 
       <Route
         path="vans"
