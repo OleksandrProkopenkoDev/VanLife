@@ -4,7 +4,7 @@ import "./Vans.css";
 import { getVans } from "../../api";
 
 export function loader() {
-  return defer({ vans: getVans() });
+  return getVans();
 }
 
 export default function Vans() {

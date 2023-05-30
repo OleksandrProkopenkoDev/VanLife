@@ -9,7 +9,7 @@ export default function HostLayout() {
   };
 
   return (
-    <>
+    <div>
       <nav className="host-nav">
         <NavLink
           to="."
@@ -38,6 +38,6 @@ export default function HostLayout() {
         </NavLink>
       </nav>
       <Outlet />
-    </>
+    </div>
   );
 }

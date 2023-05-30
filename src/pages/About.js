@@ -1,7 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import poster from "../assets/images/about_poster.png";
 import "./About.css";
 
 function About() {
+  const navigate = useNavigate();
+
+  const goToVansPage = () => {
+    navigate("/vans");
+  };
+
   return (
     <div className="about">
       <img className="about--poster" src={poster} />
@@ -18,7 +25,9 @@ function About() {
         </p>
         <div className="about--explore">
           <h2>Your destination is waiting. Your van is ready.</h2>
-          <button className="link-button">Explore our vans</button>
+          <button className="link-button" onClick={goToVansPage}>
+            Explore our vans
+          </button>
         </div>
       </div>
     </div>

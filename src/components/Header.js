@@ -42,7 +42,7 @@ export default function Header() {
         <Link to="login" className="login-link">
           <img src={userIcon} className="login-icon" />
         </Link>
-        <button onClick={fakeLogOut}>X</button>
+        {/* <button onClick={fakeLogOut}>X</button> */}
       </nav>
     </header>
   );
